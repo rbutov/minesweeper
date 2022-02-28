@@ -11,13 +11,13 @@ const HeaderContainer = styled.div`
 
   ${TimerContainer} {
     position: absolute;
-    left: 5px;
-    top: 5px;
+    right: 2px;
+    top: 2px;
   }
   ${CounterContainer} {
     position: absolute;
-    right: 5px;
-    top: 5px;
+    left: 2px;
+    top: 2px;
   }
   ${FaceContainer} {
     position: relative;

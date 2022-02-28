@@ -150,6 +150,8 @@ const getCellType = ({
           return CellTypes.TYPE_2;
         case 3:
           return CellTypes.TYPE_3;
+        case 4:
+          return CellTypes.TYPE_4;
         default:
           return CellTypes.MINE;
       }

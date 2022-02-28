@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { initField, revealKey, toggleFlag } from 'actions/fieldActions';
+import { increaseTimer, initField, revealKey, toggleFlag } from 'actions/fieldActions';
 import { generateMines, generateMap, revealCell, toKey } from 'helper/field';
 import { Size } from 'types';
 
@@ -10,6 +10,8 @@ export interface FieldState {
   revealedKeys: string[];
   flaggedKeys: string[];
   failedMineKey: string | null;
+  timer: number;
+  isActive: boolean;
 }
 
 const initialState: FieldState = {
@@ -22,6 +24,8 @@ const initialState: FieldState = {
   revealedKeys: [],
   flaggedKeys: [],
   failedMineKey: null,
+  timer: 0,
+  isActive: false,
 };
 
 const fieldSlice = createSlice({
@@ -29,17 +33,29 @@ const fieldSlice = createSlice({
   initialState,
   reducers: {},
   extraReducers: {
-    [initField.type]: (state) => {
+    [increaseTimer.type]: (state) => {
+      state.timer++;
+    },
+    [initField.type]: (state, action) => {
+      if (action.payload.minesCount) {
+        state.size = action.payload.size;
+        state.minesCount = action.payload.minesCount;
+      }
+
       const seedMines = generateMines({ ...state.size, minesCount: state.minesCount });
       state.map = generateMap({ seedMines, size: state.size });
       state.revealedKeys = [];
       state.flaggedKeys = [];
       state.failedMineKey = null;
+      state.timer = 0;
+      state.isActive = false;
     },
     [toggleFlag.type]: (state, action) => {
       if (state.failedMineKey) {
+        state.isActive = false;
         return;
       }
+      state.isActive = true;
 
       const key = toKey({ row: action.payload.row, col: action.payload.col });
       if (!state.flaggedKeys.includes(key)) {
@@ -50,8 +66,10 @@ const fieldSlice = createSlice({
     },
     [revealKey.type]: (state, action) => {
       if (state.failedMineKey) {
+        state.isActive = false;
         return;
       }
+      state.isActive = true;
 
       const key = toKey({ row: action.payload.row, col: action.payload.col });
       const revealedKeys = new Set([...state.revealedKeys]);
@@ -64,6 +82,7 @@ const fieldSlice = createSlice({
       });
 
       if (badaboom) {
+        state.isActive = false;
         state.failedMineKey = key;
       } else {
         state.revealedKeys = [...revealedKeys];

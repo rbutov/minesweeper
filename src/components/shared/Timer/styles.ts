@@ -6,8 +6,13 @@ const TimerContainer = styled.div`
   width: 61.5px;
   height: 37.5px;
   background-size: 100% 100%;
-
   background-image: url(${nums_background});
+  padding: 3px;
+
+  > div {
+    float: left;
+    width: 33%;
+  }
 `;
 
 export { TimerContainer };

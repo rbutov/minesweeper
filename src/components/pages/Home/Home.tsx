@@ -1,7 +1,8 @@
 import React, { useEffect, useRef } from 'react';
+import { CONFIGS } from 'config/game';
 import { useAppDispatch } from 'hooks/useAppDispatch';
 import { useAppSelector } from 'hooks/useAppSelector';
-import { initField } from 'actions/fieldActions';
+import { increaseTimer, initField } from 'actions/fieldActions';
 import { Field } from 'components/shared/Field';
 import { Header } from 'components/shared/Header';
 import {
@@ -22,13 +23,37 @@ import {
 } from './styles';
 
 const Home = () => {
-  const { map } = useAppSelector((state) => state.field);
+  const timerRef = useRef<NodeJS.Timer>();
+  const { map, isActive } = useAppSelector((state) => state.field);
   const containerRef = useRef<HTMLDivElement | null>(null);
   const dispatch = useAppDispatch();
 
+  const cancelTimer = () => {
+    if (timerRef.current) {
+      clearInterval(timerRef.current);
+      timerRef.current = undefined;
+    }
+  };
+
+  useEffect(() => {
+    console.log(timerRef.current);
+    if (isActive) {
+      timerRef.current = setInterval(() => {
+        dispatch(increaseTimer());
+      }, 1000);
+    }
+    if (!isActive) {
+      cancelTimer();
+    }
+
+    return () => {
+      cancelTimer();
+    };
+  }, [isActive]);
+
   useEffect(() => {
     if (!map) {
-      dispatch(initField());
+      dispatch(initField(CONFIGS.hard));
     }
 
     if (containerRef.current) {

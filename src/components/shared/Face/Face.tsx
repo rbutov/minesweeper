@@ -6,9 +6,10 @@ import { FaceProps } from '.';
 
 const Face = ({ type }: FaceProps) => {
   const dispatch = useAppDispatch();
+
   const handleClick = (ev: React.MouseEvent<HTMLElement>) => {
     ev.preventDefault();
-    dispatch(initField());
+    dispatch(initField({}));
   };
 
   return (
