@@ -19,6 +19,7 @@ const Field = () => {
                   key={`${row}-${col}`}
                   row={row}
                   col={col}
+                  failedMineKey={failedMineKey}
                   type={getCellType({ row, col, flaggedKeys, revealedKeys, map, failedMineKey })}
                 />
               );

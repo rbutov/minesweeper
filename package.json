@@ -26,7 +26,18 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "test:ci": "CI=test react-scripts test",
+    "test:coverage": "react-scripts test --coverage --watchAll=false",
+    "test:snap": "react-scripts test --updateSnapshot --watchAll=false",
+    "test:debug": "react-scripts --inspect-brk test --runInBand --no-cache",
+    "test:doh": "react-scripts test --detectOpenHandles",
+    "test:pr": "npm run lint && npm run test:ci",
+    "test-ui": "cypress open",
+    "test-ui:ci": "cypress run",
+    "lint": "eslint 'src/**/*.ts' 'src/**/*.tsx'",
+    "lint:fix": "eslint --fix --cache 'src/**/*.ts' 'src/**/*.tsx'",
+    "prettier": "prettier --check 'src/**/*.ts' 'src/**/*.tsx'",
+    "prettier:fix": "prettier --write 'src/**/*.ts' 'src/**/*.tsx'"
   },
   "eslintConfig": {
     "extends": [
@@ -47,13 +58,17 @@
     ]
   },
   "devDependencies": {
+    "@types/enzyme": "^3.10.11",
     "@types/redux-logger": "^3.0.9",
     "@types/styled-components": "^5.1.23",
     "@types/webpack-env": "^1.16.3",
     "@typescript-eslint/eslint-plugin": "^5.12.1",
     "@typescript-eslint/parser": "^5.12.1",
+    "@wojtekmaj/enzyme-adapter-react-17": "^0.6.6",
     "babel-eslint": "^10.1.0",
     "cypress": "^9.5.0",
+    "enzyme": "^3.11.0",
+    "enzyme-to-json": "^3.6.2",
     "eslint": "^8.10.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.4.0",

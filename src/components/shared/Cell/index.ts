@@ -17,6 +17,7 @@ interface CellProps {
   type: CellType;
   row: number;
   col: number;
+  failedMineKey: string | null;
 }
 
 import closed from 'assets/cell/closed.svg';

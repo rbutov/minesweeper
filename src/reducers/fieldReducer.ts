@@ -58,6 +58,9 @@ const fieldSlice = createSlice({
       state.isActive = true;
 
       const key = toKey({ row: action.payload.row, col: action.payload.col });
+      if (state.revealedKeys.includes(key)) {
+        return;
+      }
       if (!state.flaggedKeys.includes(key)) {
         state.flaggedKeys = [...state.flaggedKeys, key];
       } else {

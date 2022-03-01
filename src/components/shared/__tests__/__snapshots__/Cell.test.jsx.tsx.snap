@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cell /> render <Cell /> component 1`] = `
+<Provider
+  store={
+    Object {
+      "@@observable": [Function],
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Cell
+    col={0}
+    failedMineKey="0"
+    row={0}
+    type="closed"
+  >
+    <styled.div
+      failedMineKey="0"
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      type="closed"
+    >
+      <div
+        className="sc-bdvvtL htSWkN"
+        onClick={[Function]}
+        onMouseDown={[Function]}
+        type="closed"
+      />
+    </styled.div>
+  </Cell>
+</Provider>
+`;
