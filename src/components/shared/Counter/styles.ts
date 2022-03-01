@@ -11,7 +11,13 @@ const CounterContainer = styled.div`
 
   > div {
     float: left;
-    width: 33%;
+    width: 18.5px;
+    height: 37.5px;
+    margin-right: 3px;
+
+    :last-child {
+      margin-right: 0;
+    }
   }
 `;
 
