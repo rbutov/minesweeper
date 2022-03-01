@@ -15,7 +15,11 @@ const GameMode = () => {
     <GameModeContainer>
       {Object.keys(CONFIGS).map((config) => {
         return (
-          <button key={config} onClick={() => handleGameModeChange(config as keyof typeof CONFIGS)}>
+          <button
+            data-testid={`mode-${config}`}
+            key={config}
+            onClick={() => handleGameModeChange(config as keyof typeof CONFIGS)}
+          >
             {config}
           </button>
         );

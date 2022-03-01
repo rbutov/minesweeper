@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "declaration": true,
+    "declarationMap": true,
+    "baseUrl": "./",
+    "moduleResolution": "node",
+    "target": "esnext",
+    "allowSyntheticDefaultImports": true,
+    "lib": ["es5", "dom"],
+    "strict": true,
+    "types": [
+      "cypress",
+      "jest"
+    ],
+    "noEmit": true,
+    "paths": {
+      "@src/*": ["../src/*"]
+    }
+  },
+  "include": [
+    "**/*.ts",
+  ]
+}

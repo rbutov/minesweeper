@@ -1,3 +1,6 @@
+/**
+ * _game mode config
+ */
 const CONFIGS = {
   easy: {
     minesCount: 10,

@@ -1,0 +1,143 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> _render 1`] = `
+<Provider
+  store={
+    Object {
+      "@@observable": [Function],
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Header>
+    <styled.div
+      data-testid="header"
+    >
+      <div
+        className="sc-jRQBWg SDskj"
+        data-testid="header"
+      >
+        <Counter>
+          <styled.div
+            data-testid="counter"
+          >
+            <div
+              className="sc-hKwDye gwOZro"
+              data-testid="counter"
+            >
+              <Number
+                num={0}
+              >
+                <styled.div
+                  data-testid="number-0"
+                  num={0}
+                >
+                  <div
+                    className="sc-dkPtRN jWYRyZ"
+                    data-testid="number-0"
+                  />
+                </styled.div>
+              </Number>
+              <Number
+                num={1}
+              >
+                <styled.div
+                  data-testid="number-1"
+                  num={1}
+                >
+                  <div
+                    className="sc-dkPtRN kQGVMA"
+                    data-testid="number-1"
+                  />
+                </styled.div>
+              </Number>
+              <Number
+                num={0}
+              >
+                <styled.div
+                  data-testid="number-0"
+                  num={0}
+                >
+                  <div
+                    className="sc-dkPtRN jWYRyZ"
+                    data-testid="number-0"
+                  />
+                </styled.div>
+              </Number>
+            </div>
+          </styled.div>
+        </Counter>
+        <Face
+          type="unpressed"
+        >
+          <styled.div
+            data-testid="face"
+            onClick={[Function]}
+            type="unpressed"
+          >
+            <div
+              className="sc-gsDKAQ hZfqEV"
+              data-testid="face"
+              onClick={[Function]}
+              type="unpressed"
+            />
+          </styled.div>
+        </Face>
+        <Timer>
+          <styled.div
+            data-testid="timer"
+          >
+            <div
+              className="sc-eCImPb NrMVc"
+              data-testid="timer"
+            >
+              <Number
+                num={0}
+              >
+                <styled.div
+                  data-testid="number-0"
+                  num={0}
+                >
+                  <div
+                    className="sc-dkPtRN jWYRyZ"
+                    data-testid="number-0"
+                  />
+                </styled.div>
+              </Number>
+              <Number
+                num={0}
+              >
+                <styled.div
+                  data-testid="number-0"
+                  num={0}
+                >
+                  <div
+                    className="sc-dkPtRN jWYRyZ"
+                    data-testid="number-0"
+                  />
+                </styled.div>
+              </Number>
+              <Number
+                num={0}
+              >
+                <styled.div
+                  data-testid="number-0"
+                  num={0}
+                >
+                  <div
+                    className="sc-dkPtRN jWYRyZ"
+                    data-testid="number-0"
+                  />
+                </styled.div>
+              </Number>
+            </div>
+          </styled.div>
+        </Timer>
+      </div>
+    </styled.div>
+  </Header>
+</Provider>
+`;

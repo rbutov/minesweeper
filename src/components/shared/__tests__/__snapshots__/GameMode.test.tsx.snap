@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Timer /> _render 1`] = `
+<Provider
+  store={
+    Object {
+      "@@observable": [Function],
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Timer>
+    <styled.div
+      data-testid="timer"
+    >
+      <div
+        className="sc-dkPtRN grcJWz"
+        data-testid="timer"
+      >
+        <Number
+          num={0}
+        >
+          <styled.div
+            data-testid="number-0"
+            num={0}
+          >
+            <div
+              className="sc-gsDKAQ fjaGMh"
+              data-testid="number-0"
+            />
+          </styled.div>
+        </Number>
+        <Number
+          num={0}
+        >
+          <styled.div
+            data-testid="number-0"
+            num={0}
+          >
+            <div
+              className="sc-gsDKAQ fjaGMh"
+              data-testid="number-0"
+            />
+          </styled.div>
+        </Number>
+        <Number
+          num={0}
+        >
+          <styled.div
+            data-testid="number-0"
+            num={0}
+          >
+            <div
+              className="sc-gsDKAQ fjaGMh"
+              data-testid="number-0"
+            />
+          </styled.div>
+        </Number>
+      </div>
+    </styled.div>
+  </Timer>
+</Provider>
+`;

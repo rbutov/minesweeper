@@ -13,7 +13,7 @@ const Counter = () => {
   }, [minesCount, flaggedKeys]);
 
   return (
-    <CounterContainer>
+    <CounterContainer data-testid={'counter'}>
       <Number num={count[0]} />
       <Number num={count[1]} />
       <Number num={count[2]} />

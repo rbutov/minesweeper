@@ -15,6 +15,10 @@ const toKey = ({ row, col }: ToKeyProps) => {
   return row + '-' + col;
 };
 
+/**
+ * _get row and col from Key
+ * @param key: _field coordinate
+ */
 const fromKey = (key: string) => {
   return key.split('-').map(Number);
 };
@@ -24,6 +28,13 @@ interface GenerateMinesProps {
   cols: number;
   minesCount: number;
 }
+
+/**
+ * _generate mines
+ * @param rows: _field rows
+ * @param cols: _field cols
+ * @param minesCount: _mines count
+ */
 const generateMines = ({ rows, cols, minesCount }: GenerateMinesProps) => {
   const mines = [];
 
@@ -41,6 +52,12 @@ interface GenerateMapProps {
   seedMines: string[];
   size: Size;
 }
+
+/**
+ * _generate field map
+ * @param seedMines: _mines positions
+ * @param size: _field size
+ */
 const generateMap = ({ seedMines, size }: GenerateMapProps) => {
   const map = new Map();
 
@@ -71,6 +88,14 @@ interface isInBoundsProps {
   cell: number[];
   size: Size;
 }
+
+/**
+ * _check field borders
+ * @param row: _row number
+ * @param col: _column number
+ * @param rows: _rows count
+ * @param cols: _columns count
+ */
 const isInBounds = ({ cell: [row, col], size: { rows, cols } }: isInBoundsProps) => {
   if (row < 0 || col < 0) {
     return false;
@@ -83,6 +108,12 @@ interface getNeighborsProps {
   key: string;
   size: Size;
 }
+
+/**
+ * _get cell neighbors
+ * @param key: _current key
+ * @param size: _field size
+ */
 const getNeighbors = ({ key, size }: getNeighborsProps) => {
   const [nRow, nCol] = fromKey(key);
   const neighborRowCols = [
@@ -109,6 +140,16 @@ interface GetCellTypeProps {
   map: Record<string, string | number> | null;
   failedMineKey: string | null;
 }
+
+/**
+ * _get filed types
+ * @param row
+ * @param col
+ * @param flaggedKeys
+ * @param revealedKeys
+ * @param map
+ * @param failedMineKey
+ */
 const getCellType = ({
   row,
   col,
@@ -173,6 +214,14 @@ interface RevealCellProps {
   key: string;
   size: Size;
 }
+
+/**
+ * _reveal the cell
+ * @param revealedKeys: _already revealed cells keys
+ * @param map: _field map
+ * @param key: _current key
+ * @param size: _field size
+ */
 const revealCell = ({ revealedKeys, map, key, size }: RevealCellProps) => {
   if (map.get(key) === 'mine') {
     return true;
@@ -190,6 +239,15 @@ interface PropagateRevealProps {
   visited: Set<string>;
   size: Size;
 }
+
+/**
+ * _reveal all neighbors cells of field
+ * @param revealedKeys: _revealed keys on field
+ * @param map: _field map
+ * @param key: _current key
+ * @param visited: _visited set
+ * @param size: _field size
+ */
 const propagateReveal = ({ revealedKeys, map, key, visited, size }: PropagateRevealProps) => {
   revealedKeys.add(key);
   visited.add(key);
@@ -208,6 +266,12 @@ interface GetAllMinesProps {
   map: Record<string, string | number> | null;
   minesCount: number;
 }
+
+/**
+ * _get all mines keys from map
+ * @param map: _field map
+ * @param minesCount: _mines count
+ */
 const getAllMines = ({ map, minesCount }: GetAllMinesProps) => {
   const mines = [];
 

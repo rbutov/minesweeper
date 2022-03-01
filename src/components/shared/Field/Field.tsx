@@ -9,7 +9,7 @@ const Field = () => {
   const { size } = useAppSelector((state) => state.field);
 
   return (
-    <FieldContainer>
+    <FieldContainer data-testid={'field'}>
       {[...Array(size.cols).keys()].map((col) => {
         return (
           <FieldRow key={`${col}`}>

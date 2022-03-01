@@ -10,7 +10,7 @@ const Header = () => {
   const { size, revealedKeys, failedMineKey, minesCount } = useAppSelector((state) => state.field);
 
   return (
-    <HeaderContainer>
+    <HeaderContainer data-testid={'header'}>
       <Counter />
       <Face type={getFace({ size, revealedKeys, failedMineKey, minesCount })} />
       <Timer />

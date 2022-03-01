@@ -13,7 +13,7 @@ const Timer = () => {
   }, [timer]);
 
   return (
-    <TimerContainer>
+    <TimerContainer data-testid={'timer'}>
       <Number num={count[0]} />
       <Number num={count[1]} />
       <Number num={count[2]} />

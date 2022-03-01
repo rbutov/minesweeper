@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Counter /> _render 1`] = `
+<Provider
+  store={
+    Object {
+      "@@observable": [Function],
+      "dispatch": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Counter>
+    <styled.div
+      data-testid="counter"
+    >
+      <div
+        className="sc-hKwDye gwOZro"
+        data-testid="counter"
+      >
+        <Number
+          num={0}
+        >
+          <styled.div
+            data-testid="number-0"
+            num={0}
+          >
+            <div
+              className="sc-dkPtRN jWYRyZ"
+              data-testid="number-0"
+            />
+          </styled.div>
+        </Number>
+        <Number
+          num={1}
+        >
+          <styled.div
+            data-testid="number-1"
+            num={1}
+          >
+            <div
+              className="sc-dkPtRN kQGVMA"
+              data-testid="number-1"
+            />
+          </styled.div>
+        </Number>
+        <Number
+          num={0}
+        >
+          <styled.div
+            data-testid="number-0"
+            num={0}
+          >
+            <div
+              className="sc-dkPtRN jWYRyZ"
+              data-testid="number-0"
+            />
+          </styled.div>
+        </Number>
+      </div>
+    </styled.div>
+  </Counter>
+</Provider>
+`;

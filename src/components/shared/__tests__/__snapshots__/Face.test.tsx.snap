@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<Cell /> render <Cell /> component 1`] = `
+exports[`<Face /> _render 1`] = `
 <Provider
   store={
     Object {
@@ -12,25 +12,21 @@ exports[`<Cell /> render <Cell /> component 1`] = `
     }
   }
 >
-  <Cell
-    col={0}
-    failedMineKey="0"
-    row={0}
-    type="closed"
+  <Face
+    type="win"
   >
     <styled.div
-      failedMineKey="0"
+      data-testid="face"
       onClick={[Function]}
-      onMouseDown={[Function]}
-      type="closed"
+      type="win"
     >
       <div
-        className="sc-bdvvtL htSWkN"
+        className="sc-gsDKAQ daujPg"
+        data-testid="face"
         onClick={[Function]}
-        onMouseDown={[Function]}
-        type="closed"
+        type="win"
       />
     </styled.div>
-  </Cell>
+  </Face>
 </Provider>
 `;

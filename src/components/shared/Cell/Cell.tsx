@@ -4,7 +4,7 @@ import { revealKey, toggleFlag } from 'actions/fieldActions';
 import { CellContainer } from './styles';
 import { CellProps } from '.';
 
-const Cell = ({ type, row, col, failedMineKey }: CellProps) => {
+const Cell = React.memo(({ type, row, col, failedMineKey }: CellProps) => {
   const dispatch = useAppDispatch();
 
   const handleMouseDown = (ev: React.MouseEvent<HTMLElement>) => {
@@ -23,12 +23,13 @@ const Cell = ({ type, row, col, failedMineKey }: CellProps) => {
 
   return (
     <CellContainer
+      data-testid={'cell'}
       type={type}
       failedMineKey={failedMineKey}
       onMouseDown={handleMouseDown}
       onClick={handleClick}
     />
   );
-};
+});
 
 export { Cell };

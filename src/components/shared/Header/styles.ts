@@ -21,7 +21,7 @@ const HeaderContainer = styled.div`
   }
   ${FaceContainer} {
     position: relative;
-    top: 5px;
+    top: 4px;
     margin: auto;
   }
 `;

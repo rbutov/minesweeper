@@ -1,3 +1,7 @@
+/**
+ * _convert number to array of 3 items
+ * @param num: _input number
+ */
 const numberToArray = (num: number) => {
   const resArray = Array.from(String(num), Number);
   if (resArray.length < 3) {

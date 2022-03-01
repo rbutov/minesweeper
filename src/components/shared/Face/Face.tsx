@@ -12,11 +12,7 @@ const Face = ({ type }: FaceProps) => {
     dispatch(initField({}));
   };
 
-  return (
-    <>
-      <FaceContainer onClick={handleClick} type={type} />
-    </>
-  );
+  return <FaceContainer data-testid={'face'} onClick={handleClick} type={type} />;
 };
 
 export { Face };

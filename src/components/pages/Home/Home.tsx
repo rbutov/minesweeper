@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from 'react';
 import { CONFIGS } from 'config/game';
+import { increaseTimer, initField } from 'actions/fieldActions';
 import { useAppDispatch } from 'hooks/useAppDispatch';
 import { useAppSelector } from 'hooks/useAppSelector';
-import { increaseTimer, initField } from 'actions/fieldActions';
 import { Field } from 'components/shared/Field';
 import { Header } from 'components/shared/Header';
+import { GameMode } from 'components/shared/GameMode/GameMode';
 import {
   BottomBorderContainer,
   BottomLeftCorner,
@@ -21,7 +22,6 @@ import {
   TopLeftCorner,
   VerticalBorder,
 } from './styles';
-import { GameMode } from 'components/shared/GameMode/GameMode';
 
 const Home = () => {
   const timerRef = useRef<NodeJS.Timer>();
@@ -53,7 +53,7 @@ const Home = () => {
 
   useEffect(() => {
     if (!map) {
-      dispatch(initField(CONFIGS.hard));
+      dispatch(initField(CONFIGS.easy));
     }
 
     if (containerRef.current) {
