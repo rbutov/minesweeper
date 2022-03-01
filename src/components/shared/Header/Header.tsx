@@ -7,12 +7,12 @@ import { Timer } from 'components/shared/Timer';
 import { HeaderContainer } from './styles';
 
 const Header = () => {
-  const { failedMineKey } = useAppSelector((state) => state.field);
+  const { size, revealedKeys, failedMineKey, minesCount } = useAppSelector((state) => state.field);
 
   return (
     <HeaderContainer>
       <Counter />
-      <Face type={getFace({ failedMineKey })} />
+      <Face type={getFace({ size, revealedKeys, failedMineKey, minesCount })} />
       <Timer />
     </HeaderContainer>
   );

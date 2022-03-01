@@ -204,4 +204,23 @@ const propagateReveal = ({ revealedKeys, map, key, visited, size }: PropagateRev
   }
 };
 
-export { toKey, generateMines, generateMap, getCellType, revealCell };
+interface GetAllMinesProps {
+  map: Record<string, string | number> | null;
+  minesCount: number;
+}
+const getAllMines = ({ map, minesCount }: GetAllMinesProps) => {
+  const mines = [];
+
+  for (let key in map) {
+    if (map[key] === 'mine') {
+      mines.push(key);
+    }
+    if (mines.length === minesCount) {
+      break;
+    }
+  }
+
+  return mines;
+};
+
+export { toKey, generateMines, generateMap, getCellType, revealCell, getAllMines };

@@ -147,7 +147,7 @@ const tsRules = {
   '@typescript-eslint/member-ordering': 'error',
   '@typescript-eslint/no-empty-function': 'error',
   '@typescript-eslint/no-empty-interface': 'error',
-  // '@typescript-eslint/no-explicit-any': 'error',
+  '@typescript-eslint/no-explicit-any': 'error',
   '@typescript-eslint/no-for-in-array': 'error',
   '@typescript-eslint/no-misused-new': 'error',
   '@typescript-eslint/no-namespace': 'error',

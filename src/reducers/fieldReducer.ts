@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { increaseTimer, initField, revealKey, toggleFlag } from 'actions/fieldActions';
-import { generateMines, generateMap, revealCell, toKey } from 'helper/field';
+import { generateMines, generateMap, revealCell, toKey, getAllMines } from 'helper/field';
 import { Size } from 'types';
 
 export interface FieldState {
@@ -71,13 +71,13 @@ const fieldSlice = createSlice({
       }
       state.isActive = true;
 
-      const key = toKey({ row: action.payload.row, col: action.payload.col });
+      const key = toKey(action.payload);
       const revealedKeys = new Set([...state.revealedKeys]);
 
       const badaboom = revealCell({
         revealedKeys,
+        key,
         map: new Map(Object.entries(state.map || {})),
-        key: toKey({ row: action.payload.row, col: action.payload.col }),
         size: state.size,
       });
 
@@ -86,6 +86,13 @@ const fieldSlice = createSlice({
         state.failedMineKey = key;
       } else {
         state.revealedKeys = [...revealedKeys];
+        if (
+          state.size.cols * state.size.cols ===
+          state.revealedKeys.length - state.minesCount + 2
+        ) {
+          state.isActive = false;
+          state.flaggedKeys = getAllMines(state);
+        }
       }
     },
   },
