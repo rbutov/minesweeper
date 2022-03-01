@@ -2,7 +2,7 @@ import React from 'react';
 import { getCellType } from 'helper/field';
 import { useAppSelector } from 'hooks/useAppSelector';
 import { Cell } from 'components/shared/Cell';
-import { FieldContainer, NextLine } from './styles';
+import { FieldContainer, FieldRow, NextLine } from './styles';
 
 const Field = () => {
   const { flaggedKeys, revealedKeys, map, failedMineKey } = useAppSelector((state) => state.field);
@@ -12,7 +12,7 @@ const Field = () => {
     <FieldContainer>
       {[...Array(size.cols).keys()].map((col) => {
         return (
-          <>
+          <FieldRow key={`${col}`}>
             {[...Array(size.rows).keys()].map((row) => {
               return (
                 <Cell
@@ -24,7 +24,7 @@ const Field = () => {
               );
             })}
             <NextLine key={col} />
-          </>
+          </FieldRow>
         );
       })}
     </FieldContainer>

@@ -7,17 +7,17 @@ const CONFIGS = {
     },
   },
   medium: {
-    minesCount: 50,
+    minesCount: 40,
     size: {
-      cols: 19,
-      rows: 19,
+      cols: 16,
+      rows: 16,
     },
   },
   hard: {
-    minesCount: 100,
+    minesCount: 99,
     size: {
-      cols: 29,
-      rows: 29,
+      cols: 16,
+      rows: 30,
     },
   },
 };

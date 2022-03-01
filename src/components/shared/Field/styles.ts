@@ -8,4 +8,8 @@ const NextLine = styled.div`
   clear: both;
 `;
 
-export { FieldContainer, NextLine };
+const FieldRow = styled.div`
+  display: flex;
+`;
+
+export { FieldContainer, NextLine, FieldRow };

@@ -21,6 +21,7 @@ import {
   TopLeftCorner,
   VerticalBorder,
 } from './styles';
+import { GameMode } from 'components/shared/GameMode/GameMode';
 
 const Home = () => {
   const timerRef = useRef<NodeJS.Timer>();
@@ -36,7 +37,6 @@ const Home = () => {
   };
 
   useEffect(() => {
-    console.log(timerRef.current);
     if (isActive) {
       timerRef.current = setInterval(() => {
         dispatch(increaseTimer());
@@ -64,33 +64,36 @@ const Home = () => {
   }, []);
 
   return (
-    <MinesWeeperContainer ref={containerRef}>
-      <TopBorderContainer>
-        <TopLeftCorner />
-        <HorizontalBorder />
-        <TobRightCorner />
-      </TopBorderContainer>
-      <HeaderContainer>
-        <VerticalBorder />
-        <Header />
-        <VerticalBorder />
-      </HeaderContainer>
-      <MiddleBorderContainer>
-        <MiddleLeft />
-        <HorizontalBorder />
-        <MiddleRight />
-      </MiddleBorderContainer>
-      <FieldContainer>
-        <VerticalBorder />
-        <Field />
-        <VerticalBorder />
-      </FieldContainer>
-      <BottomBorderContainer>
-        <BottomLeftCorner />
-        <HorizontalBorder />
-        <BottomRightCorner />
-      </BottomBorderContainer>
-    </MinesWeeperContainer>
+    <>
+      <GameMode />
+      <MinesWeeperContainer ref={containerRef}>
+        <TopBorderContainer>
+          <TopLeftCorner />
+          <HorizontalBorder />
+          <TobRightCorner />
+        </TopBorderContainer>
+        <HeaderContainer>
+          <VerticalBorder />
+          <Header />
+          <VerticalBorder />
+        </HeaderContainer>
+        <MiddleBorderContainer>
+          <MiddleLeft />
+          <HorizontalBorder />
+          <MiddleRight />
+        </MiddleBorderContainer>
+        <FieldContainer>
+          <VerticalBorder />
+          <Field />
+          <VerticalBorder />
+        </FieldContainer>
+        <BottomBorderContainer>
+          <BottomLeftCorner />
+          <HorizontalBorder />
+          <BottomRightCorner />
+        </BottomBorderContainer>
+      </MinesWeeperContainer>
+    </>
   );
 };
 
