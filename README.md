@@ -1,5 +1,5 @@
 # Minesweeper
-![](https://github.com/rgbutov/minesweeper/blob/master/screenshot.png?raw=true =x250)
+<img src="https://github.com/rgbutov/minesweeper/blob/master/screenshot.png?raw=true" width="250">
 
 ### RUN:
 ```npm i```
