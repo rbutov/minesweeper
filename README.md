@@ -1,4 +1,6 @@
 # Minesweeper
+![screen shot](https://github.com/rgbutov/minesweeper/blob/master/screenshot.png?raw=true)
+
 ### RUN:
 ```npm i```
 then
