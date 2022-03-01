@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAppSelector } from 'hooks/useAppSelector';
-import { numberToArray } from 'helper/number';
+import { numberToArray } from 'helpers/number';
 import { Number } from 'components/shared/Number';
 import { TimerContainer } from './styles';
 

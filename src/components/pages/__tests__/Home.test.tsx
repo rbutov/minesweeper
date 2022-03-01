@@ -1,11 +1,11 @@
 import React from 'react';
-import { waitForComponentToPaint, wrapAppComponent } from 'helper/test';
+import { waitForComponentToPaint, wrapAppComponent } from 'helpers/test';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { toWin } from 'setupTests';
 import { CONFIGS } from 'config/game';
 import { CellTypes } from 'components/shared/Cell';
-import { generateMines } from 'helper/field';
+import { generateMines } from 'helpers/field';
 import { Faces } from 'components/shared/Face';
 import { Home } from '../Home';
 

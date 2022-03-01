@@ -1,5 +1,5 @@
 import React from 'react';
-import { getCellType } from 'helper/field';
+import { getCellType } from 'helpers/field';
 import { useAppSelector } from 'hooks/useAppSelector';
 import { Cell } from 'components/shared/Cell';
 import { FieldContainer, FieldRow, NextLine } from './styles';

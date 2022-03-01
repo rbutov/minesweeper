@@ -1,5 +1,5 @@
 import React from 'react';
-import { wrapAppComponent } from 'helper/test';
+import { wrapAppComponent } from 'helpers/test';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import { Face, Faces } from '../Face';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { getFace } from 'helper/game';
+import { getFace } from 'helpers/game';
 import { useAppSelector } from 'hooks/useAppSelector';
 import { Face } from 'components/shared/Face';
 import { Counter } from 'components/shared/Counter';

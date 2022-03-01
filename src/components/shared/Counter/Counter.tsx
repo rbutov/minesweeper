@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useAppSelector } from 'hooks/useAppSelector';
-import { getMinesCount } from 'helper/game';
+import { getMinesCount } from 'helpers/game';
 import { Number } from 'components/shared/Number';
 import { CounterContainer } from './styles';
 

@@ -1,5 +1,5 @@
 import { Faces } from 'components/shared/Face';
-import { numberToArray } from 'helper/number';
+import { numberToArray } from 'helpers/number';
 import { Size } from 'types';
 
 interface GetFaceProps {

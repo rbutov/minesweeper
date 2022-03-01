@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { Size } from 'types';
 import { increaseTimer, initField, revealKey, toggleFlag } from 'actions/fieldActions';
-import { generateMines, generateMap, revealCell, toKey, getAllMines } from 'helper/field';
+import { generateMines, generateMap, revealCell, toKey, getAllMines } from 'helpers/field';
 
 export interface FieldState {
   minesCount: number;
