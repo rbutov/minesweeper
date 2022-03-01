@@ -5,8 +5,9 @@ import { Cell } from 'components/shared/Cell';
 import { FieldContainer, FieldRow, NextLine } from './styles';
 
 const Field = () => {
-  const { flaggedKeys, revealedKeys, map, failedMineKey } = useAppSelector((state) => state.field);
-  const { size } = useAppSelector((state) => state.field);
+  const { flaggedKeys, revealedKeys, map, failedMineKey, size } = useAppSelector(
+    (state) => state.field
+  );
 
   return (
     <FieldContainer data-testid={'field'}>
