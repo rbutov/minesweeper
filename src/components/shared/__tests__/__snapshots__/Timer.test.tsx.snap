@@ -17,7 +17,7 @@ exports[`<Timer /> _render 1`] = `
       data-testid="timer"
     >
       <div
-        className="sc-dkPtRN grcJWz"
+        className="sc-dkPtRN kzNjvX"
         data-testid="timer"
       >
         <Number

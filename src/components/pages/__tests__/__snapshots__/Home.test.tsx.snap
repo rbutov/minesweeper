@@ -89,7 +89,7 @@ exports[`<Home /> _render 1`] = `
                       data-testid="counter"
                     >
                       <div
-                        className="sc-gKclnd brljop"
+                        className="sc-gKclnd jPKMcZ"
                         data-testid="counter"
                       >
                         <Number
@@ -155,7 +155,7 @@ exports[`<Home /> _render 1`] = `
                       data-testid="timer"
                     >
                       <div
-                        className="sc-iCfMLu ZVUQE"
+                        className="sc-iCfMLu fqiNGA"
                         data-testid="timer"
                       >
                         <Number

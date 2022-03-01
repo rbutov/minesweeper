@@ -25,7 +25,7 @@ exports[`<Header /> _render 1`] = `
             data-testid="counter"
           >
             <div
-              className="sc-hKwDye gwOZro"
+              className="sc-hKwDye cHUlqo"
               data-testid="counter"
             >
               <Number
@@ -91,7 +91,7 @@ exports[`<Header /> _render 1`] = `
             data-testid="timer"
           >
             <div
-              className="sc-eCImPb NrMVc"
+              className="sc-eCImPb nFXVg"
               data-testid="timer"
             >
               <Number
