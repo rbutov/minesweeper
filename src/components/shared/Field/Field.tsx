@@ -10,21 +10,22 @@ const Field = () => {
 
   return (
     <FieldContainer data-testid={'field'}>
-      {[...Array(size.cols).keys()].map((col) => {
+      {[...Array(size.rows).keys()].map((row) => {
         return (
-          <FieldRow key={`${col}`}>
-            {[...Array(size.rows).keys()].map((row) => {
+          <FieldRow key={`${row}`}>
+            {[...Array(size.cols).keys()].map((col) => {
               return (
-                <Cell
-                  key={`${row}-${col}`}
-                  row={row}
-                  col={col}
-                  failedMineKey={failedMineKey}
-                  type={getCellType({ row, col, flaggedKeys, revealedKeys, map, failedMineKey })}
-                />
+                <div key={`${row}-${col}`} data-testid={`cell-${row}-${col}`}>
+                  <Cell
+                    row={row}
+                    col={col}
+                    failedMineKey={failedMineKey}
+                    type={getCellType({ row, col, flaggedKeys, revealedKeys, map, failedMineKey })}
+                  />
+                </div>
               );
             })}
-            <NextLine key={col} />
+            <NextLine key={row} />
           </FieldRow>
         );
       })}

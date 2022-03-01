@@ -20,7 +20,7 @@ const getFace = ({ failedMineKey, size, revealedKeys, minesCount }: GetFaceProps
   if (failedMineKey) {
     return Faces.LOSE;
   }
-  if (size.cols * size.cols === revealedKeys.length - minesCount + 2) {
+  if (size.cols * size.rows === revealedKeys.length + minesCount) {
     return Faces.WIN;
   }
 

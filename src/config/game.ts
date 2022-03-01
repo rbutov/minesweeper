@@ -19,8 +19,8 @@ const CONFIGS = {
   hard: {
     minesCount: 99,
     size: {
-      cols: 16,
-      rows: 30,
+      cols: 30,
+      rows: 16,
     },
   },
 };

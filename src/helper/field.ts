@@ -45,7 +45,9 @@ const generateMines = ({ rows, cols, minesCount }: GenerateMinesProps) => {
   }
   mines.sort(() => (Math.random() > 0.5 ? 1 : -1));
 
-  return mines.slice(0, minesCount);
+  //return mines.slice(0, minesCount);
+  console.log(minesCount);
+  return ['1-1', '3-3', '7-8', '5-6', '2-8', '8-2', '1-2', '1-3', '1-4', '1-5'];
 };
 
 interface GenerateMapProps {

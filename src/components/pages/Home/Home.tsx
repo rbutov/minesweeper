@@ -5,7 +5,7 @@ import { useAppDispatch } from 'hooks/useAppDispatch';
 import { useAppSelector } from 'hooks/useAppSelector';
 import { Field } from 'components/shared/Field';
 import { Header } from 'components/shared/Header';
-import { GameMode } from 'components/shared/GameMode/GameMode';
+import { GameMode } from 'components/shared/GameMode';
 import {
   BottomBorderContainer,
   BottomLeftCorner,

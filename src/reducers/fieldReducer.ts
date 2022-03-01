@@ -51,7 +51,10 @@ const fieldSlice = createSlice({
       state.isActive = false;
     },
     [toggleFlag.type]: (state, action) => {
-      if (state.failedMineKey) {
+      if (
+        state.failedMineKey ||
+        state.size.cols * state.size.rows === state.revealedKeys.length + state.minesCount
+      ) {
         state.isActive = false;
         return;
       }
@@ -68,11 +71,13 @@ const fieldSlice = createSlice({
       }
     },
     [revealKey.type]: (state, action) => {
-      if (state.failedMineKey) {
+      if (
+        state.failedMineKey ||
+        state.size.cols * state.size.rows === state.revealedKeys.length + state.minesCount
+      ) {
         state.isActive = false;
         return;
       }
-      state.isActive = true;
 
       const key = toKey(action.payload);
       const revealedKeys = new Set([...state.revealedKeys]);
@@ -89,12 +94,12 @@ const fieldSlice = createSlice({
         state.failedMineKey = key;
       } else {
         state.revealedKeys = [...revealedKeys];
-        if (
-          state.size.cols * state.size.cols ===
-          state.revealedKeys.length - state.minesCount + 2
-        ) {
+
+        if (state.size.cols * state.size.rows === state.revealedKeys.length + state.minesCount) {
           state.isActive = false;
           state.flaggedKeys = getAllMines(state);
+        } else {
+          state.isActive = true;
         }
       }
     },
