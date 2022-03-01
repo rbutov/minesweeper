@@ -1,10 +1,12 @@
 import React from 'react';
 import { useAppDispatch } from 'hooks/useAppDispatch';
+import { useAppSelector } from 'hooks/useAppSelector';
 import { revealKey, toggleFlag } from 'actions/fieldActions';
 import { CellContainer } from './styles';
 import { CellProps } from '.';
 
 const Cell = ({ type, row, col }: CellProps) => {
+  const { failedMineKey } = useAppSelector((state) => state.field);
   const dispatch = useAppDispatch();
 
   const handleMouseDown = (ev: React.MouseEvent<HTMLElement>) => {
@@ -21,7 +23,14 @@ const Cell = ({ type, row, col }: CellProps) => {
     dispatch(revealKey({ row, col }));
   };
 
-  return <CellContainer onMouseDown={handleMouseDown} onClick={handleClick} type={type} />;
+  return (
+    <CellContainer
+      onMouseDown={handleMouseDown}
+      onClick={handleClick}
+      type={type}
+      failedMineKey={failedMineKey}
+    />
+  );
 };
 
 export { Cell };

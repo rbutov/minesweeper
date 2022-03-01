@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FaceAsserts, FacesType } from '.';
+import { FaceAsserts, Faces, FacesType } from '.';
 
 const FaceContainer = styled.div<{ type: FacesType }>`
   width: 39px;
@@ -7,6 +7,10 @@ const FaceContainer = styled.div<{ type: FacesType }>`
   background-size: 100% 100%;
 
   ${({ type }) => `background-image: url(${FaceAsserts[type]})`};
+
+  :active {
+    ${() => `background-image: url(${FaceAsserts[Faces.PRESSED]})`};
+  }
 `;
 
 export { FaceContainer };
