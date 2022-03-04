@@ -1,0 +1,38 @@
+{
+  "files": {
+    "main.js": "/minesweeper/static/js/main.5ed92f19.js",
+    "static/js/787.e867dfcb.chunk.js": "/minesweeper/static/js/787.e867dfcb.chunk.js",
+    "static/media/face_lose.svg": "/minesweeper/static/media/face_lose.34216f035603db75a9abf6eba80394e8.svg",
+    "static/media/face_win.svg": "/minesweeper/static/media/face_win.acdee64c3ee0e9233d5096a02872e836.svg",
+    "static/media/nums_background.svg": "/minesweeper/static/media/nums_background.3350bdffdc50ae589d3d1c34e71b4659.svg",
+    "static/media/face_unpressed.svg": "/minesweeper/static/media/face_unpressed.30b0ff76d2117dc4d039396979eadd23.svg",
+    "static/media/face_pressed.svg": "/minesweeper/static/media/face_pressed.63825654b0d83561dd9a80056dc422fa.svg",
+    "static/media/mine.svg": "/minesweeper/static/media/mine.00c63aaafd5e0a9d59a6f517ca4fdb9a.svg",
+    "static/media/mine_red.svg": "/minesweeper/static/media/mine_red.e626d706038912927b7bcae3e6487da7.svg",
+    "static/media/flag.svg": "/minesweeper/static/media/flag.9b8036a76c045e8c7e53041035b5efdb.svg",
+    "static/media/mine_wrong.svg": "/minesweeper/static/media/mine_wrong.7bb75938c787825209c3c75468a99c51.svg",
+    "static/media/d9.svg": "/minesweeper/static/media/d9.b5a06a8a0eb2360776c4640d1b3253b0.svg",
+    "static/media/d7.svg": "/minesweeper/static/media/d7.b7e55a6e7c89053f763119a1454be3d0.svg",
+    "static/media/d-.svg": "/minesweeper/static/media/d-.1650221a514db1f13795fa83d517358b.svg",
+    "static/media/d6.svg": "/minesweeper/static/media/d6.dc0a0ee3f3b85049a657cf9b9ed5414e.svg",
+    "static/media/d8.svg": "/minesweeper/static/media/d8.1bf5c66f0f09dd7c6e60153ceda2ccfe.svg",
+    "static/media/d5.svg": "/minesweeper/static/media/d5.89bc8845e0d9ed20983146f2ff936f82.svg",
+    "static/media/d2.svg": "/minesweeper/static/media/d2.e264b77c79f81df52e101cb8367b8ed7.svg",
+    "static/media/d4.svg": "/minesweeper/static/media/d4.8a1ec70f98c2f19f8a01919c5ed8aa6c.svg",
+    "static/media/d3.svg": "/minesweeper/static/media/d3.616825869c64fabfbed5ad0259843310.svg",
+    "static/media/d0.svg": "/minesweeper/static/media/d0.e4dbc2cfed8a14327313a910587b4512.svg",
+    "static/media/d1.svg": "/minesweeper/static/media/d1.bced79276938eebecaf9ebe75212f08c.svg",
+    "static/media/type3.svg": "/minesweeper/static/media/type3.cca036e9ba11f9b854f0253daaea36de.svg",
+    "static/media/type2.svg": "/minesweeper/static/media/type2.98bc41ee3910d775476ae3f3a2fb08cf.svg",
+    "static/media/type4.svg": "/minesweeper/static/media/type4.68650cb5dbb88c508fb4089052c9b7c7.svg",
+    "static/media/type1.svg": "/minesweeper/static/media/type1.33e69c75effd385342a30720993a12b4.svg",
+    "static/media/closed.svg": "/minesweeper/static/media/closed.259a5f00083d4b4d6c475a1db34caf7c.svg",
+    "static/media/type0.svg": "/minesweeper/static/media/type0.5785f52d4b2570bbea6db95a951131de.svg",
+    "index.html": "/minesweeper/index.html",
+    "main.5ed92f19.js.map": "/minesweeper/static/js/main.5ed92f19.js.map",
+    "787.e867dfcb.chunk.js.map": "/minesweeper/static/js/787.e867dfcb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.5ed92f19.js"
+  ]
+}
