@@ -1,7 +1,7 @@
 # minesweeper
 [DEMO](https://rgbutov.github.io/minesweeper/)
 <div>
-<img src="https://github.com/rgbutov/minesweeper/blob/master/screenshot.png?raw=true" width="250">
+<img src="https://github.com/rbutov/minesweeper/blob/master/screenshot.png?raw=true" width="250">
 </div>
 
 ### RUN:
